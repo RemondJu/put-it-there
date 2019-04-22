@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import HomePage from './views/HomePage'
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div className="App">
-        <Button variant="contained" color="primary">
-          Hola mundo!
-        </Button>
-        <Button variant="contained" color="primary">
-          Hello world!
-        </Button>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+        </Switch>
       </div>
     );
-  }
 }
 
 export default App;
